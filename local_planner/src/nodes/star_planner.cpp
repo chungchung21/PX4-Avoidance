@@ -151,10 +151,10 @@ void StarPlanner::buildLookAheadTree() {
            static_cast<double>((std::clock() - start_time) / static_cast<double>(CLOCKS_PER_SEC / 1000)));
 
 #ifndef DISABLE_SIMULATION  // For large trees, this could be very slow!
-  for (int j = 0; j < path_node_positions_.size(); j++) {
-    ROS_DEBUG("\033[0;35m[SP] node %i : [ %f, %f, %f]\033[0m", j, path_node_positions_[j].x(),
-              path_node_positions_[j].y(), path_node_positions_[j].z());
-  }
+  // for (int j = 0; j < path_node_positions_.size(); j++) {
+  //   ROS_DEBUG("\033[0;35m[SP] node %i : [ %f, %f, %f]\033[0m", j, path_node_positions_[j].x(),
+  //             path_node_positions_[j].y(), path_node_positions_[j].z());
+  // }
 #endif
 }
 }
