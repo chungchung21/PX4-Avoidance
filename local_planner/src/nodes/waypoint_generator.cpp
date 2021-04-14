@@ -383,8 +383,8 @@ void WaypointGenerator::adaptSpeed(float dt) {
 
   output_.adapted_goto_position = position_ + pose_to_wp;
 
-  ROS_INFO("[WG] Speed adapted WP: [%f %f %f].", output_.adapted_goto_position.x(), output_.adapted_goto_position.y(),
-           output_.adapted_goto_position.z());
+  // ROS_INFO("[WG] Speed adapted WP: [%f %f %f].", output_.adapted_goto_position.x(), output_.adapted_goto_position.y(),
+  //          output_.adapted_goto_position.z());
 }
 
 // create the message that is sent to the UAV
@@ -403,9 +403,9 @@ void WaypointGenerator::getPathMsg() {
     smoothWaypoint(dt);
   }
 
-  ROS_INFO("[WG] Final waypoint: [%f %f %f]. %f %f %f \n", output_.smoothed_goto_position.x(),
-           output_.smoothed_goto_position.y(), output_.smoothed_goto_position.z(), output_.linear_velocity_wp.x(),
-           output_.linear_velocity_wp.y(), output_.linear_velocity_wp.z());
+  // ROS_INFO("[WG] Final waypoint: [%f %f %f]. %f %f %f \n", output_.smoothed_goto_position.x(),
+  //          output_.smoothed_goto_position.y(), output_.smoothed_goto_position.z(), output_.linear_velocity_wp.x(),
+  //          output_.linear_velocity_wp.y(), output_.linear_velocity_wp.z());
   createPoseMsg(output_.position_wp, output_.orientation_wp, output_.smoothed_goto_position, setpoint_yaw_rad_);
 }
 
