@@ -52,7 +52,7 @@ void LocalPlanner::dynamicReconfigureSetParams(avoidance::LocalPlannerNodeConfig
 void LocalPlanner::setGoal(const Eigen::Vector3f& goal) {
   goal_ = goal;
 
-  ROS_INFO("===== Set Goal ======: [%f, %f, %f].", goal_.x(), goal_.y(), goal_.z());
+  ROS_INFO_THROTTLE(1, "===== Set Goal ======: [%f, %f, %f].", goal_.x(), goal_.y(), goal_.z());
   applyGoal();
 }
 void LocalPlanner::setPreviousGoal(const Eigen::Vector3f& prev_goal) { prev_goal_ = prev_goal; }

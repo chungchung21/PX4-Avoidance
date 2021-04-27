@@ -445,7 +445,7 @@ bool WaypointGenerator::isAltitudeChange() {
         return false;
       }
     }
-    ROS_INFO("\033[1;35m[OA] Reach height first \033[0m");
+    ROS_INFO_THROTTLE(1, "\033[1;35m[OA] Reach height first \033[0m");
     return true;
   }
 
